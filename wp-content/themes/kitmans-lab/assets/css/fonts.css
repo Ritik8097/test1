@@ -1,0 +1,200 @@
+/* ------ DRUK WIDE ------ */
+
+
+/* Black */
+
+
+/* @font-face {
+    font-family: 'Druk Wide';
+    src: url('../fonts/DrukWide-Heavy-Trial.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url('../fonts/DrukWide-HeavyItalic-Trial.otf');
+    font-weight: 900;
+    font-style: italic;
+} */
+
+
+/* Bold */
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url('../fonts/DrukWide-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* @font-face {
+    font-family: 'Druk Wide';
+    src: url('../fonts/DrukWide-BoldItalic-Trial.otf');
+    font-weight: 700;
+    font-style: italic;
+} */
+
+
+/* Medium */
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url('../fonts/DrukWide-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* @font-face {
+    font-family: 'Druk Wide';
+    src: url('../fonts/DrukWide-MediumItalic-Trial.otf');
+    font-weight: 500;
+    font-style: italic;
+} */
+
+
+/* ------ DRUK ------ */
+
+
+/* Black */
+
+
+/* @font-face {
+    font-family: 'Druk';
+    src: url('../fonts/Druk-Heavy-Trial.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk';
+    src: url('../fonts/Druk-HeavyItalic-Trial.otf');
+    font-weight: 900;
+    font-style: italic;
+} */
+
+
+/* Bold */
+
+@font-face {
+    font-family: 'Druk';
+    src: url('../fonts/Druk-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* @font-face {
+    font-family: 'Druk';
+    src: url('../fonts/Druk-BoldItalic-Trial.otf');
+    font-weight: 700;
+    font-style: italic;
+} */
+
+
+/* Medium */
+
+@font-face {
+    font-family: 'Druk';
+    src: url('../fonts/Druk-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* @font-face {
+    font-family: 'Druk';
+    src: url('../fonts/Druk-MediumItalic-Trial.otf');
+    font-weight: 500;
+    font-style: italic;
+} */
+
+
+/* ------ NEUE HAAS GROTESK ------ */
+
+
+/* Black */
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayBlack.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayBlackItalic.ttf');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+/* Bold */
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayBoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* Medium */
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayMedium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayMediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+/* Normal */
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayRoman.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayRomanItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* Light */
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayLight.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NeueHaasDisplayLightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}

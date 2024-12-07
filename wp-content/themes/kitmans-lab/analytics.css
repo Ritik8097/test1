@@ -1,0 +1,27 @@
+/* Custom Analytics Page CSS*/
+#analytics-heading-clients .heading-hr.heading-left-hr:before{
+    right: 70%;
+    z-index: 0;
+}
+#analytics-heading-clients .heading-hr.heading-left-hr .elementor-heading-title{
+    margin:0;
+    margin-left:22%;
+    z-index: 1;
+    position: relative;    
+}
+
+@media (max-width: 575.98px) {
+    #analytics-heading-hero .h-size-6>div.elementor-widget-container *, .h-size-6{
+        font-size: 30px;
+    }
+}
+
+#analytics-hero-texteditor .mb-all-0 p{
+    margin:0;
+}
+
+#analytics-heading-blue-highlight .p-all-6 .elementor-heading-title{
+    padding: 6px;
+}
+
+
