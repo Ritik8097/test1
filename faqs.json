@@ -1236,5 +1236,108 @@
         
       ]
     }
+
+
+  , 
+    
+    {
+      "id": 21,
+      "header": "BM Intimation and Outcome",
+      "text": [
+        
+        {
+          "id": 3,
+        
+          "head": "BM_Outcome_07.05.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/BM_Outcome_07.05.2024.pdf?v=1735628433"
+        },
+        {
+          "id": 4,
+          "head": "BM_Outcome_17.06.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/BM_Outcome_17.06.2024.pdf?v=1735628432"
+        },
+
+        {
+          "id": 5,
+        
+          "head": "BM_Outcome_20.06.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/BM_Outcome_20.06.2024.pdf?v=1735628433"
+        },
+        {
+          "id": 6,
+          "head": "Colab_Press_Release_20.06.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Colab_Press_Release_20.06.2024.pdf?v=1735628433"
+        }
+        ,
+        
+
+
+
+
+        {
+          "id": 32,
+        
+          "head": "BM_Outcome_25.06.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/BM_Outcome_25.06.2024.pdf?v=1735628432"
+        },
+        {
+          "id": 42,
+          "head": "Colab_Press_Release_25.06.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Colab_Press_Release_25.06.2024.pdf?v=1735628432"
+        },
+
+        {
+          "id": 52,
+        
+          "head": "Intimation_BM_01.07.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Intimation_BM_01.07.2024.pdf?v=1735628432"
+        },
+        {
+          "id": 62,
+          "head": "Outcome_BM_01.07.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Outcome_BM_01.07.2024.pdf?v=1735628433"
+        }
+        ,
+        
+        {
+          "id": 82,
+        
+          "head": "Outcome_UFR_30.09.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Outcome_UFR_30.09.2024.pdf?v=1735628433"
+        },
+        {
+          "id": 92,
+          "head": "Intimation_of_BM_Colab_UFR_30.09.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Intimation_of_BM_Colab_UFR_30.09.2024.pdf?v=1735628432"
+        }
+
+
+
+
+
+
+        ,
+        {
+          "id": 100,
+          "head": "BM_Outcome_07.12.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/BM_Outcome_07.12.2024.pdf?v=1735628433"
+        }
+        ,
+        
+        {
+          "id": 101,
+        
+          "head": "Press_Release_-_07.12.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Press_Release_-_07.12.2024.pdf?v=1735628433"
+        },
+        {
+          "id": 102,
+          "head": "BM_Outcome_26.12.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/BM_Outcome_26.12.2024.pdf?v=1735628433"
+        }
+        
+        
+      ]
+    }
     
 ]
