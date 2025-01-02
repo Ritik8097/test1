@@ -70,7 +70,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 @import "https://unpkg.com/open-props@1.7.0/normalize.dark.min.css"
   layer(design.normalize);
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Lobster&display=swap");
-
+.imageGallery img{
+	 object-fit: cover;
+	
+}
 @layer base.override-normalize {
   :root {
     font-family: "Inter Variable", sans-serif;
@@ -236,7 +239,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
       & img {
         inline-size: 100%;
         block-size: 100%;
-	      object-fit: cover;
+	     
       }
 
       &::after {
