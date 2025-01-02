@@ -63,7 +63,45 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
 </script>
 
+<style>
+	.container {
+  width: 1400px;
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 20px;
+}
 
+.container .box {
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.container .box img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: calc(100% - 40px);
+    columns: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    columns: 1;
+  }
+}
+
+	</style>
 
 
 	
@@ -848,6 +886,35 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 		</div>
 					</div>
 		</section>
+
+
+
+
+				<div class="container">
+    <div class="box"><img src="https://images.pexels.com/photos/1547813/pexels-photo-1547813.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/6543903/pexels-photo-6543903.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/5679496/pexels-photo-5679496.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/5304809/pexels-photo-5304809.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/5870532/pexels-photo-5870532.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/5399402/pexels-photo-5399402.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/2777671/pexels-photo-2777671.png?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/5403478/pexels-photo-5403478.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/4732162/pexels-photo-4732162.png?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/4335249/pexels-photo-4335249.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/1982483/pexels-photo-1982483.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/3254429/pexels-photo-3254429.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/3209221/pexels-photo-3209221.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/545063/pexels-photo-545063.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/262896/pexels-photo-262896.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/2568410/pexels-photo-2568410.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/1266105/pexels-photo-1266105.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/6467908/pexels-photo-6467908.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/6554702/pexels-photo-6554702.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/6791447/pexels-photo-6791447.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/6939694/pexels-photo-6939694.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+    <div class="box"><img src="https://images.pexels.com/photos/4711052/pexels-photo-4711052.jpeg?auto=compress&cs=tinysrgb&w=800" alt="image" loading="lazy"></div>
+  </div>
  
 					
 
