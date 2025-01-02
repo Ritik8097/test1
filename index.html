@@ -62,6 +62,259 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 /*! This file is auto-generated */
 !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
 </script>
+
+
+	<style>
+	@import "https://unpkg.com/open-props@1.7.0/open-props.min.css"
+  layer(design.system);
+@import "https://unpkg.com/open-props@1.7.0/normalize.dark.min.css"
+  layer(design.normalize);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Lobster&display=swap");
+
+@layer base.override-normalize {
+  :root {
+    font-family: "Inter Variable", sans-serif;
+    --surface-1: oklch(0 0 0);
+    --text-1: oklch(0.97 0 0);
+    --text-2: oklch(0.73 0 0);
+    --link-visited: oklch(0.73 0 0);
+  }
+
+  a {
+    color: var(--text-2);
+    display: flex;
+    gap: var(--size-1);
+  }
+}
+
+@layer base.app {
+  body {
+    --max-inline: 935px;
+    --gap: var(--size-fluid-4);
+  }
+
+  section {
+    display: grid;
+    justify-content: center;
+    padding-inline: var(--size-1);
+    gap: var(--size-7);
+  }
+}
+
+@layer components.header {
+  header {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--gap);
+    background-color: var(--surface-1);
+    position: sticky;
+    inset-block-start: 0;
+    z-index: var(--layer-1);
+
+    & h1 {
+      font-family: "Lobster", sans-serif;
+
+      font-weight: var(--font-weight-1);
+      font-size: clamp(1.5rem, 6vw, 3rem);
+    }
+  }
+}
+
+@layer components.gallery {
+  .imageGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-inline-size: var(--max-inline);
+    gap: calc(var(--border-size-2) * 2);
+
+    & img {
+      aspect-ratio: var(--ratio-square);
+      max-inline-size: 100%;
+      background-image: var(--gradient-8);
+    }
+
+    & > button {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      &::after {
+        content: "";
+        inset: 0;
+        display: block;
+        background-color: oklch(0 0 0 / 0.4);
+        position: absolute;
+        background-image: url(https://raw.githubusercontent.com/mobalti/open-props-interfaces/7d7d59bdb5dca71ec7280b88876b45d31cbf3c4a/image-gallery/images/pushpin-fill.svg);
+        background-size: var(--size-5);
+        background-repeat: no-repeat;
+        background-position: top var(--size-1) right var(--size-1);
+        opacity: 0;
+        transition: 0.2s ease;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@layer components.dialog {
+  .dialog {
+    --sm-font-size: 0.875rem;
+    --size: min(80dvh, 100%);
+    --fade-duration: 1s;
+
+    inline-size: var(--size);
+    max-inline-size: 600px;
+    border-radius: unset;
+
+    padding: 0;
+
+    .dialog-container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .controls {
+      position: fixed;
+      z-index: var(--layer-1);
+      inset-block-start: calc(50% - var(--size-5) / 2);
+      inset-inline: var(--size-3);
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      animation: var(--animation-fade-in) var(--fade-duration) forwards;
+
+      & button {
+        inline-size: var(--size-8);
+        border-radius: var(--radius-round);
+        aspect-ratio: var(--ratio-square);
+        font-size: 1.75rem;
+        background: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: var(--shadow-1);
+        color: var(--stone-1);
+        transition: color 0.2s ease;
+        @media (width > 600px) {
+          font-size: 3rem;
+        }
+
+        &:hover {
+          color: var(--stone-6);
+        }
+      }
+    }
+
+    .closeDialog {
+      position: fixed;
+      inset-block-start: var(--size-2);
+      inset-inline-end: var(--size-2);
+      block-size: 48px;
+      inline-size: 48px;
+      background-color: transparent;
+      font-size: var(--font-size-5);
+      padding: 0;
+    }
+
+    .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: var(--size);
+      inline-size: var(--size);
+      block-size: var(--size);
+
+    
+
+      & img {
+        inline-size: 100%;
+        block-size: 100%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background-color: var(--surface-1);
+
+        background-image: url(https://raw.githubusercontent.com/mobalti/open-props-interfaces/7d7d59bdb5dca71ec7280b88876b45d31cbf3c4a/image-gallery/images/bars-rotate-fade.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: var(--layer-3);
+
+        /* <Suspense> */
+        animation: var(--animation-fade-out) var(--fade-duration) forwards,
+          var(--fade-duration) op-hide 1s forwards;
+      }
+    }
+  }
+}
+
+@layer animation.base {
+  @keyframes op-hide {
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@layer animation.scroll-driven {
+ 
+  #carousel {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+
+    scroll-timeline: --carousel inline;
+
+    > * {
+      scroll-snap-align: center;
+    }
+  }
+
+  .controls-btn {
+    animation-duration: auto;
+    animation-fill-mode: forwards;
+    animation-timeline: --carousel;
+    animation-timing-function: linear;
+
+    &.preview {
+      animation-name: preview;
+    }
+
+    &.next {
+      animation-name: next;
+    }
+  }
+
+  @keyframes preview {
+    from {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes next {
+    to {
+      visibility: hidden;
+    }
+  }
+}
+
+
+
+</style>
+
+
+	
 <style id='wp-emoji-styles-inline-css'>
 
 	img.wp-smiley, img.emoji {
@@ -843,6 +1096,319 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 		</div>
 					</div>
 		</section>
+
+						<section>
+			<div class="imageGallery">
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-1.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-2.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-3.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-4.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-5.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-6.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-7.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-8.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-9.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-10.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-11.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			  <button>
+				<picture>
+				  <img
+					width="309"
+					height="309"
+					src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-12.webp"
+					alt="A cute cat"
+					loading="lazy"
+				  />
+				</picture>
+			  </button>
+			</div>
+	
+			<dialog class="dialog" id="dialog">
+			  <div class="dialogContainer">
+				<div class="carousel" id="carousel">
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-1.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-2.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-3.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-4.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-5.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-6.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-7.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+	
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-8.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+	
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-9.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-10.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-11.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				  <picture>
+					<img
+					  width="309"
+					  height="309"
+					  src="https://raw.githubusercontent.com/mobalti/open-props-interfaces/main/image-gallery/images/img-12.webp"
+					  alt="A cute cat"
+					  loading="lazy"
+					/>
+				  </picture>
+				</div>
+				<div class="controls">
+				  <button
+					class="controls-btn preview"
+					onclick="carousel.scrollBy(-100, 0)"
+				  >
+					<i class="ri-arrow-left-circle-fill"></i>
+				  </button>
+				  <button
+					class="controls-btn next"
+					onclick="carousel.scrollBy(100, 0)"
+				  >
+					<i class="ri-arrow-right-circle-fill"></i>
+				  </button>
+				</div>
+				<button id="closeDialogBtn" class="closeDialog">
+				  <i class="ri-close-line"></i>
+				</button>
+			  </div>
+			</dialog>
+		  </section>
+
+<script>
+
+const dialog = document.querySelector('#dialog');
+const images = document.querySelectorAll('.imageGallery button');
+const closeDialogBtn = document.querySelector('#closeDialogBtn');
+
+function openDialog(index) {
+  if (!document.startViewTransition) {
+    dialog.showModal();
+    document.querySelectorAll('#carousel img')[index].scrollIntoView();
+  } else handleTransition(index);
+}
+
+// Wait until the transition finished and the dialog opens before scrolling into view.
+async function handleTransition(index) {
+  const transition = document.startViewTransition(() => dialog.showModal());
+  try {
+    await transition.finished;
+  } finally {
+    document.querySelectorAll('#carousel img')[index].scrollIntoView();
+  }
+}
+
+const closeDialog = () => {
+  if (!document.startViewTransition) dialog.close();
+  else document.startViewTransition(() => dialog.close());
+};
+
+images.forEach((img, index) => {
+  console.log(index);
+  img.addEventListener('click', () => openDialog(index));
+});
+
+closeDialogBtn.addEventListener('click', () => closeDialog());
+
+</script>
+
+
+
+
+				
 		<!--
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-33cf9fb founder-quote-section elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="33cf9fb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
