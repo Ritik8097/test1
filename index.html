@@ -64,6 +64,205 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </script>
 
 
+	<style>
+	@import "https://unpkg.com/open-props@1.7.0/open-props.min.css"
+  layer(design.system);
+@import "https://unpkg.com/open-props@1.7.0/normalize.dark.min.css"
+  layer(design.normalize);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Lobster&display=swap");
+.imageGallery img{
+	 object-fit: cover;
+	
+}
+@layer base.override-normalize {
+ 
+
+
+}
+
+@layer base.app {
+ 
+
+  
+}
+
+@layer components.header {
+ 
+}
+		.carousel{
+			scrollbar-width: none;
+			
+		}
+@media screen and (max-width:600px){
+	.imageGallery {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    max-inline-size: var(--max-inline);
+    gap: calc(var(--border-size-2)* 2);
+}
+	.controls{
+		display:none
+	}
+}
+@layer components.gallery {
+  .imageGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-inline-size: var(--max-inline);
+    gap: calc(var(--border-size-2) * 2);
+
+   
+
+    & > button {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+     
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@layer components.dialog {
+  .dialog {
+    --sm-font-size: 0.875rem;
+    --size: min(80dvh, 100%);
+    --fade-duration: 1s;
+
+    inline-size: var(--size);
+    max-inline-size: 600px;
+    border-radius: unset;
+
+    padding: 0;
+
+    .dialog-container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .controls {
+      position: fixed;
+      z-index: var(--layer-1);
+      inset-block-start: calc(50% - var(--size-5) / 2);
+      inset-inline: var(--size-3);
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      animation: var(--animation-fade-in) var(--fade-duration) forwards;
+
+      & button {
+        inline-size: var(--size-8);
+        border-radius: var(--radius-round);
+        aspect-ratio: var(--ratio-square);
+        font-size: 1.75rem;
+        background: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: var(--shadow-1);
+        color: var(--stone-1);
+        transition: color 0.2s ease;
+        @media (width > 600px) {
+          font-size: 3rem;
+        }
+
+        &:hover {
+          color: var(--stone-6);
+        }
+      }
+    }
+
+    .closeDialog {
+      position: fixed;
+      inset-block-start: var(--size-2);
+      inset-inline-end: var(--size-2);
+      block-size: 48px;
+      inline-size: 48px;
+      background-color: transparent;
+      font-size: var(--font-size-5);
+      padding: 0;
+    }
+
+    .carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: var(--size);
+      inline-size: var(--size);
+      block-size: var(--size);
+
+    
+
+      
+
+     
+    }
+  }
+}
+
+@layer animation.base {
+  @keyframes op-hide {
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@layer animation.scroll-driven {
+ 
+  #carousel {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+
+    scroll-timeline: --carousel inline;
+
+    > * {
+      scroll-snap-align: center;
+    }
+  }
+
+  .controls-btn {
+    animation-duration: auto;
+    animation-fill-mode: forwards;
+    animation-timeline: --carousel;
+    animation-timing-function: linear;
+
+    &.preview {
+      animation-name: preview;
+    }
+
+    &.next {
+      animation-name: next;
+    }
+  }
+
+  @keyframes preview {
+    from {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes next {
+    to {
+      visibility: hidden;
+    }
+  }
+}
+
+
+
+</style>
 
 
 	
