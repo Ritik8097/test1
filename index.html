@@ -123,7 +123,15 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			scrollbar-width: none;
 			
 		}
-
+@media screen and (max-width:600px){
+	.imageGallery {
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    max-inline-size: var(--max-inline);
+    gap: calc(var(--border-size-2)* 2);
+}
+}
 @layer components.gallery {
   .imageGallery {
     display: grid;
