@@ -219,13 +219,23 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
   flex-wrap: wrap;
   gap: 20px;
 }
-
+	@media screen and (max-width:600px){
+		.blog-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+	}
+@media screen and (min-width:600px){
 .blog-card {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   width: calc(33.333% - 20px);
   box-sizing: border-box;
+}
 }
 
 .blog-card img {
