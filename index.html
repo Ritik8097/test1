@@ -64,6 +64,64 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </script>
 
 <style>
+	.blog-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  background: #000; /* Optional for dark background */
+  padding: 20px 0;
+}
+
+.blog-slider-inner {
+  display: flex;
+  animation: slide-left 20s linear infinite;
+}
+
+.blog-card {
+  flex: 0 0 300px;
+  margin: 0 10px;
+  background: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-card h3 {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.blog-card button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.blog-card button:hover {
+  background: #0056b3;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 	@media screen and (max-width:700px){
 		.desktop-h{
 			display:none;
@@ -155,6 +213,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
 </style>
 <style id='if-so-public-dummy-inline-css'>
+	
         .lds-dual-ring {
           display: inline-block;
           width: 16px;
@@ -1621,6 +1680,90 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 	
 </main>
+						 <div class="blog-slider">
+  <div class="blog-slider-inner">
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0653/9830/9053/files/WhatsApp_Image_2025-01-24_at_12.24.33_PM.jpg?v=1737704496" alt="Blog 1">
+      <h3>The Rise of Digital Media in Sports</h3>
+	    <a href="https://www.colabcloud.in/blog.html?id=0">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0674/9614/9171/files/WhatsApp_Image_2025-01-18_at_3.35.40_PM.jpg?v=1737195094" alt="Blog 2">
+      <h3>ICC Champions Trophy 2025: India’s Squad Announced</h3>
+      <a href="https://www.colabcloud.in/blog.html?id=1">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0653/9830/9053/files/WhatsApp_Image_2025-01-17_at_1.10.36_PM.jpg?v=1737099661" alt="Blog 3">
+      <h3>Harbhajan Singh Slams Media Leaks and Sarfaraz Khan Rumors</h3>
+      <a href="https://www.colabcloud.in/blog.html?id=2">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0653/9830/9053/files/WhatsApp_Image_2025-01-23_at_3.38.07_PM.jpg?v=1737631523" alt="Blog 4">
+      <h3>Michael Clarke Inducted into the Australian Cricket Hall of Fame</h3>
+     <a href="https://www.colabcloud.in/news.html?id=0">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <!-- Duplicate cards for smooth infinite scroll -->
+   <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0653/9830/9053/files/WhatsApp_Image_2025-01-24_at_12.24.33_PM.jpg?v=1737704496" alt="Blog 1">
+      <h3>The Rise of Digital Media in Sports</h3>
+	    <a href="https://www.colabcloud.in/blog.html?id=0">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0674/9614/9171/files/WhatsApp_Image_2025-01-18_at_3.35.40_PM.jpg?v=1737195094" alt="Blog 2">
+      <h3>ICC Champions Trophy 2025: India’s Squad Announced</h3>
+      <a href="https://www.colabcloud.in/blog.html?id=1">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0653/9830/9053/files/WhatsApp_Image_2025-01-17_at_1.10.36_PM.jpg?v=1737099661" alt="Blog 3">
+      <h3>Harbhajan Singh Slams Media Leaks and Sarfaraz Khan Rumors</h3>
+      <a href="https://www.colabcloud.in/blog.html?id=2">
+      <button>View Post</button>
+	    </a>
+    </div>
+    <div class="blog-card">
+      <img src="https://cdn.shopify.com/s/files/1/0653/9830/9053/files/WhatsApp_Image_2025-01-23_at_3.38.07_PM.jpg?v=1737631523" alt="Blog 4">
+      <h3>Michael Clarke Inducted into the Australian Cricket Hall of Fame</h3>
+     <a href="https://www.colabcloud.in/news.html?id=0">
+      <button>View Post</button>
+	    </a>
+    </div>
+  </div>
+</div>
+
+
+		<script>
+
+			// To make the slider infinite, clone the first few cards dynamically
+const sliderInner = document.querySelector('.blog-slider-inner');
+const blogCards = document.querySelectorAll('.blog-card');
+
+// Clone the cards and append them
+blogCards.forEach((card) => {
+  const clone = card.cloneNode(true);
+  sliderInner.appendChild(clone);
+});
+
+		</script>				
+
+						
+
+
+
+
+
+						
 
 	
 <div class="footer-container">
