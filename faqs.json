@@ -145,6 +145,14 @@
         "head": "CGR-30.09.2024",
         "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Corporate_Governaance_30.09.2024.pdf?v=1735626402"
       }
+         ,
+      {
+        "id": 19,
+       
+       
+        "head": "Corporate_Governance_31.12.2024",
+        "link": "https://cdn.shopify.com/s/files/1/0653/9830/9053/files/Corporate_Governance_31.12.2024.html.pdf?v=1739265462"
+      }
 
       ]
     },
@@ -582,7 +590,12 @@
           "head": "Reg-745-30.09.2024",
           "link": "https://cdn.shopify.com/s/files/1/0674/9614/9171/files/Reg_74_5_30.09.2024.pdf?v=1735626262"
         }
-        
+          ,
+        {
+          "id": 101,
+          "head": "COLAB__74_5_31.12.2024",
+          "link": "https://cdn.shopify.com/s/files/1/0653/9830/9053/files/COLAB__74_5_31.12.2024.pdf?v=1739265268"
+        }
         
       ]
     }
