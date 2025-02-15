@@ -1608,5 +1608,33 @@
         
       ]
     }
+
+
+   ,
+    {
+      "id": 21,
+      "header": "Corporate Announcements",
+      "text": [
+        {
+          "id": 51,
+          "head": "Reg_30_disclosure_for_WOS__with_COI",
+          
+          "link": "https://cdn.shopify.com/s/files/1/0653/9830/9053/files/Reg_30_disclosure_for_WOS__with_COI.pdf?v=1739612650"
+        }
+        ,
+        {
+          "id": 52,
+          "head": "Reg_30_disclosure_for_WOS_28.01.2025_with_COI",
+          
+          "link": "https://cdn.shopify.com/s/files/1/0653/9830/9053/files/Reg_30_disclosure_for_WOS_28.01.2025_with_COI.pdf?v=1739612711"
+        }
+       
+        
+      ]
+    }
+
+
+
+  
     
 ]
